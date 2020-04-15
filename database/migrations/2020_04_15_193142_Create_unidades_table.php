@@ -12,7 +12,7 @@ class CreateUnidadesTable extends Migration
      */
     public function up()
     {
-        Schema::create('unidades', function (Blueprint $table) {
+        Schema::create('unidads', function (Blueprint $table) {
             $table->increments('id');
             $table->string('clave');
             $table->string('descripcion');

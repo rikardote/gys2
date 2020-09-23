@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Sistema Guardias y Suplencias</title>
     <!-- Fonts -->
     <link rel="stylesheet" href="{{ asset('plugins/font-awesome/css/font-awesome.min.css') }}">

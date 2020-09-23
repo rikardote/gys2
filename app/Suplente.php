@@ -6,7 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Suplente extends Model
 {
-    //
+    protected $fillable = [
+        'id', 'beneficiario','nombre', 'apellido_pat','apellido_mat', 'rfc','curp', 'clabe'
+    ];
 
     public function getfullnameAttribute($value)
     {

@@ -1,6 +1,6 @@
 @extends('home')
 
-@section('title', 'Puestos')
+@section('title', 'Servicios')
 
 @section('css')
 	<link rel="stylesheet" href="{{ asset('plugins/datatables/media/css/datatables.bootstrap.min.css') }}">
@@ -9,7 +9,7 @@
 @section('content')
 
 <div class="container">
-		<a class="btn btn-success" href="javascript:void(0)" id="createNewProduct">Agregar Puesto</a>
+		<a class="btn btn-success" href="javascript:void(0)" id="createNewProduct">Agregar Servicio</a>
 		<table class="table table-bordered data-table">
 			<thead>
 			<tr>
@@ -21,7 +21,7 @@
 			<tbody>
 			</tbody>
 		</table>
-		@include('admin.puestos.modal')
+		@include('admin.servicios.modal')
 </div>	
 
 @endsection
@@ -38,9 +38,9 @@
 	  var table = $('.data-table').DataTable({
 		  processing: true,
 		  serverSide: true,
-		  ajax: "{{ route('puestos.index') }}",
+		  ajax: "{{ route('servicios.index') }}",
 		  columns: [
-			  {data: 'puesto', name: 'puesto'},
+			  {data: 'servicio', name: 'servicio'},
 			  {data: 'descripcion', name: 'descripcion'},
 			  {data: 'action', name: 'action', orderable: false, searchable: false},
 		  ]
@@ -49,19 +49,19 @@
 	  $('#createNewProduct').click(function () {
         $('#saveBtn').val("create-product");
         $('#id').val('');
-        $('#puestosForm').trigger("reset");
-        $('#modelHeading').html("Agregar Nuevo puesto");
+        $('#servicioForm').trigger("reset");
+        $('#modelHeading').html("Agregar Nuevo servicio");
         $('#ajaxModel').modal('show');
     });
     
     $('body').on('click', '.editProduct', function () {
       var id = $(this).data('id');
-      $.get("{{ route('puestos.index') }}" +'/' + id +'/edit', function (data) {
-          $('#modelHeading').html("Editar Datos del puesto");
+      $.get("{{ route('servicios.index') }}" +'/' + id +'/edit', function (data) {
+          $('#modelHeading').html("Editar Datos del servicio");
           $('#saveBtn').val("editar");
           $('#ajaxModel').modal('show');
           $('#id').val(data.id);
-          $('#puesto').val(data.puesto);
+          $('#servicio').val(data.servicio);
           $('#descripcion').val(data.descripcion);
 
       })
@@ -71,13 +71,13 @@
         //$(this).html('Sending..');
     
         $.ajax({
-          data: $('#puestosForm').serialize(),
-          url: "{{ route('puestos.store') }}",
+          data: $('#servicioForm').serialize(),
+          url: "{{ route('servicios.store') }}",
           type: "POST",
           dataType: 'json',
           success: function (data) {
      
-              $('#puestosForm').trigger("reset");
+              $('#servicioForm').trigger("reset");
               $('#ajaxModel').modal('hide');
               table.draw();
          
@@ -95,7 +95,7 @@
    
 	 $.ajax({
 		 type: "DELETE",
-		 url: "{{ route('puestos.store') }}"+'/'+id,
+		 url: "{{ route('servicios.store') }}"+'/'+id,
 		 success: function (data) {
 			 table.draw();
 		 },

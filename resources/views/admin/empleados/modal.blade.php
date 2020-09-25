@@ -8,7 +8,7 @@
                 <form id="empleadosForm" name="empleadosForm" class="form-horizontal">
                    <input type="hidden" name="id" id="id">
                     <div class="form-group">
-                        <label for="beneficiario" class="col-sm-2 ">Numero de empleado</label>
+                        <label for="beneficiario" class="col-sm-4 ">Numero de empleado</label>
                         <div class="col-sm-12">
                             <input type="text" class="form-control" id="num_empleado" name="num_empleado" placeholder="Enter numero de empleado" value="" maxlength="50" required="">
                         </div>

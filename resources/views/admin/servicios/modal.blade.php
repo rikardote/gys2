@@ -8,7 +8,7 @@
                 <form id="servicioForm" name="servicioForm" class="form-horizontal">
                    <input type="hidden" name="id" id="id">
                     <div class="form-group">
-                        <label for="puesto" class="col-sm-2 ">Codigo del servicio</label>
+                        <label for="puesto" class="col-sm-4 ">Codigo del servicio</label>
                         <div class="col-sm-12">
                             <input type="text" class="form-control" id="servicio" name="servicio" placeholder="Enter codigo de servicio" value="" maxlength="50" required="">
                         </div>

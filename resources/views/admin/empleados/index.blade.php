@@ -3,7 +3,7 @@
 @section('title', 'Empleados')
 
 @section('css')
-	<link rel="stylesheet" href="{{ asset('plugins/datatables/media/css/datatables.bootstrap.min.css') }}">
+	
 @endsection
 
 @section('content')
@@ -11,7 +11,7 @@
 <hr>
 <div class="container">
 
-		<table class="table table-bordered data-table">
+		<table class="table table-striped table-bordered data-table">
 			<thead>
 			<tr>
 				<th>NUM. EMPLEADO</th>
@@ -41,7 +41,10 @@
 		  serverSide: true,
 		  ajax: "{{ route('empleados.index') }}",
 		  columns: [
-			  {data: 'num_empleado', name: 'num_empleado'},
+			  { data: "num_empleado", render: function(data, type, full, meta) {
+					return '<a href="empleado/show/'+data+'" target=_blank>'+data+'</a>'
+				}
+			  },
 			  {data: 'nombre', name: 'nombre'},
 			  {data: 'action', name: 'action', orderable: false, searchable: false},
 		  ]

@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="{{ asset('css/bootswatch/cosmo.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/flotante.css') }}">
+    <link rel="stylesheet" href="{{ asset('plugins/datatables/media/css/dataTables.foundation.min.css') }}">
 
     @include('partials.nav')
 

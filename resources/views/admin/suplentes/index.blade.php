@@ -2,9 +2,7 @@
 
 @section('title', 'SUPLENTES')
 
-@section('css')
-	<link rel="stylesheet" href="{{ asset('plugins/datatables/media/css/datatables.bootstrap.min.css') }}">
-@endsection
+
 
 @section('content')
 
@@ -13,7 +11,7 @@
 	<a class="btn btn-success" href="javascript:void(0)" id="createNewProduct">Agregar Suplente</a>
 	<hr>
 
-	<table class="table table-bordered data-table">
+	<table class="table table-striped table-bordered data-table">
 			<thead>
 			<tr>
 				<th>NUM. EMPLEADO</th>

@@ -9,7 +9,7 @@ class Puesto extends Model
     protected $fillable = [
         'puesto', 'descripcion'
     ];
-    public function setdescripcionttribute($value)
+    public function setdescripcionAttribute($value)
     {
         $this->attributes['descripcion'] = strtoupper($value);
     }

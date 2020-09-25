@@ -9,7 +9,7 @@ class Servicio extends Model
     protected $fillable = [
         'servicio', 'descripcion'
     ];
-    public function setdescripcionttribute($value)
+    public function setdescripcionAttribute($value)
     {
         $this->attributes['descripcion'] = strtoupper($value);
     }

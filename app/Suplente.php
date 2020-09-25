@@ -14,7 +14,7 @@ class Suplente extends Model
     {
        return $this->nombre . ' ' . $this->apellido_pat. ' ' . $this->apellido_mat;
     }
-    public function setnameAttribute($value)
+    public function setnombreAttribute($value)
     {
         $this->attributes['nombre'] = strtoupper($value);
     }

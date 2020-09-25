@@ -7,9 +7,10 @@
 @endsection
 
 @section('content')
-
+<a class="btn btn-success" href="javascript:void(0)" id="createNewProduct">Agregar Empleado</a>
+<hr>
 <div class="container">
-		<a class="btn btn-success" href="javascript:void(0)" id="createNewProduct">Agregar Empleado</a>
+
 		<table class="table table-bordered data-table">
 			<thead>
 			<tr>

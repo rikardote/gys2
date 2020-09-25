@@ -8,7 +8,7 @@
                 <form id="suplentesForm" name="suplentesForm" class="form-horizontal">
                    <input type="hidden" name="id" id="id">
                     <div class="form-group">
-                        <label for="beneficiario" class="col-sm-2 ">No. Beneficiario</label>
+                        <label for="beneficiario" class="col-sm-4 ">No. Beneficiario</label>
                         <div class="col-sm-12">
                             <input type="text" class="form-control" id="beneficiario" name="beneficiario" placeholder="Enter beneficiario" value="" maxlength="50" required="">
                         </div>
@@ -49,11 +49,12 @@
                         <div class="col-sm-12">
                             <input type="text" class="form-control" id="clabe" name="clabe" placeholder="Enter clabe" value="" maxlength="50" required="">
                         </div>
-                    </div>
-      
-                    <div class="form-group pull pull-right">
-                     <button type="submit" class="btn btn-primary form-control" id="saveBtn" value="create">Guardar</button>
-                    </div>
+                    </div> 
+                   <div class="form-group">
+                       <div class="col-sm-12">
+                           <button type="submit" class="btn btn-primary form-control" id="saveBtn" value="create">Guardar</button>
+                       </div>
+                   </div>
                 </form>
             </div>
         </div>

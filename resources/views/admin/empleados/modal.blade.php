@@ -19,10 +19,12 @@
                         <div class="col-sm-12">
                             <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Enter nombre" value="" maxlength="50" required="">
                         </div>
-                   
-                    <div class="form-group pull pull-right">
-                     <button type="submit" class="btn btn-primary form-control" id="saveBtn" value="create">Guardar</button>
-                    </div>
+                    </div>    
+                    <div class="form-group">
+                       <div class="col-sm-12">
+                           <button type="submit" class="btn btn-primary form-control" id="saveBtn" value="create">Guardar</button>
+                       </div>
+                   </div>
                 </form>
             </div>
         </div>

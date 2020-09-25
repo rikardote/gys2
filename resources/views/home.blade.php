@@ -41,6 +41,7 @@
     <script src="{{ asset('plugins/datatables/media/js/dataTables.bootstrap.min.js') }}"></script>
     <script src="{{ asset('plugins/datatables/extensions/Buttons/js/dataTables.buttons.min.js') }}"></script>
     <script src="{{ asset('plugins/datatables/extensions/Buttons/js/buttons.flash.min.js') }}"></script>
+    <script src="{{ asset('js/datatables_lang.js') }}"></script>
     @yield('js')
 
 </html>

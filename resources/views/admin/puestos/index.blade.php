@@ -7,9 +7,10 @@
 @endsection
 
 @section('content')
-
+<a class="btn btn-success" href="javascript:void(0)" id="createNewProduct">Agregar Puesto</a>
+<hr>
 <div class="container">
-		<a class="btn btn-success" href="javascript:void(0)" id="createNewProduct">Agregar Puesto</a>
+		
 		<table class="table table-bordered data-table">
 			<thead>
 			<tr>
@@ -49,7 +50,7 @@
 	  $('#createNewProduct').click(function () {
         $('#saveBtn').val("create-product");
         $('#id').val('');
-        $('#puestosForm').trigger("reset");
+        $('#puestoForm').trigger("reset");
         $('#modelHeading').html("Agregar Nuevo puesto");
         $('#ajaxModel').modal('show');
     });
@@ -71,13 +72,13 @@
         //$(this).html('Sending..');
     
         $.ajax({
-          data: $('#puestosForm').serialize(),
+          data: $('#puestoForm').serialize(),
           url: "{{ route('puestos.store') }}",
           type: "POST",
           dataType: 'json',
           success: function (data) {
      
-              $('#puestosForm').trigger("reset");
+              $('#servicioForm').trigger("reset");
               $('#ajaxModel').modal('hide');
               table.draw();
          

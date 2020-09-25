@@ -8,7 +8,7 @@
                 <form id="puestoForm" name="puestoForm" class="form-horizontal">
                    <input type="hidden" name="id" id="id">
                     <div class="form-group">
-                        <label for="puesto" class="col-sm-2 ">Codigo del puesto</label>
+                        <label for="puesto" class="col-sm-4 ">Codigo del puesto</label>
                         <div class="col-sm-12">
                             <input type="text" class="form-control" id="puesto" name="puesto" placeholder="Enter codigo de puesto" value="" maxlength="50" required="">
                         </div>
@@ -19,9 +19,12 @@
                         <div class="col-sm-12">
                             <input type="text" class="form-control" id="descripcion" name="descripcion" placeholder="Enter descripcion" value="" maxlength="50" required="">
                         </div>
+                    </div>
                    
-                    <div class="form-group pull pull-right">
-                     <button type="submit" class="btn btn-primary form-control" id="saveBtn" value="create">Guardar</button>
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <button type="submit" class="btn btn-primary form-control" id="saveBtn" value="create">Guardar</button>
+                        </div>
                     </div>
                 </form>
             </div>

@@ -9,8 +9,11 @@
 @section('content')
 
 <div class="container">
-		<a class="btn btn-success" href="javascript:void(0)" id="createNewProduct">Agregar Suplente</a>
-		<table class="table table-bordered data-table">
+
+	<a class="btn btn-success" href="javascript:void(0)" id="createNewProduct">Agregar Suplente</a>
+	<hr>
+
+	<table class="table table-bordered data-table">
 			<thead>
 			<tr>
 				<th>NUM. EMPLEADO</th>
@@ -26,13 +29,17 @@
 			</thead>
 			<tbody>
 			</tbody>
-		</table>
-		@include('admin.suplentes.modal')
+	</table>
+
+	@include('admin.suplentes.modal')
+	
 </div>	
 
 @endsection
 @section('js')
+
 <script type="text/javascript">
+ 
 	$(function () {
 	   
 		$.ajaxSetup({
